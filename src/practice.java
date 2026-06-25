@@ -1,15 +1,34 @@
 public class practice {
    public static void main(String[] args) {
-   // print out the sum of all the positive integers from 1-100 and the sum of the
-   // even integers from 1-100 and the odd integers from 1-100   
-   System.out.println(getDayNumber("monday"));
-   getFactorial();
-  
-   
+       System.out.println(getDayNumber("monday"));
+       getFactorial();
    }
 
- public static void getFactorial(){
-/* for (int k = 0; k <= 100; k++) {
+   public static void getFactorial(){
+
+    int evenTot = 0;
+    int oddTot = 0;
+    int total = 0;
+
+      for (int j = 0; j <= 100; j++) {
+      total+=j;
+
+        switch ( j % 2) {
+            case 0:
+            evenTot+= j;
+           continue;
+
+            default:
+           oddTot+= j; 
+
+       }
+      }
+
+      System.out.println("Odd Total: "+ oddTot);
+    System.out.println("Even Total: "+ evenTot);
+      System.out.println("Odd Total + Even Total: " + total);
+
+   /* for (int k = 0; k <= 100; k++) {
       total+=k;
 
       if (k % 2 == 0) {
@@ -19,28 +38,6 @@ public class practice {
       oddTot+= k;
       
    } */
-   
-   int evenTot = 0;
-   int oddTot = 0;
-   int total = 0;
-
- for (int j = 0; j <= 100; j++) {
-   total+=j;
-
-      switch ( j % 2) {
-         case 0:
-         evenTot+= j;
-         continue;
-
-         default:
-         oddTot+= j;
-
-      }
-   }
-
-   System.out.println("Odd Total: "+ oddTot);
-   System.out.println("Even Total: "+ evenTot);
-   System.out.println("Odd Total + Even Total: " + total);
 
    // System.out.println(factorialMethod(10));
    // System.out.println(factorialMethod(4));
